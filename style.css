@@ -1,71 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
-  min-height: 300vh;
+  font-family: "Roboto Mono", monospace;
+  background-color: #FCFAF0;
 }
 
-ul li a {
-  color: #c9c9c9 !important;
-  text-decoration: none;
-}
-
-.navbar {
-  transition: top 0.3s;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #004C66;
-  z-index: 100;
-}
-
-.navbar.hide {
-  top: -100%; /* Adjust this value based on the actual height of your navbar */
-}
-
-.logo {
-  text-transform: uppercase;
+h1 {
   font-family: "Anta", sans-serif;
-  font-weight: bold;
-  color: #ddd;
-  z-index: 9;
+  font-size: 55px;
 }
 
-.mobile-menu {
-  font-size: 32px;
-  padding: 0px 12px;
+.product {
+  transition: transform .3s;
   cursor: pointer;
-  display: none;
 }
 
-.nav-items-display {
-  right: 0 !important;
-
+.product:hover {
+  transform: scale(1.04);
 }
 
-@media screen and (max-width: 960px) {
-  .nav-items {
-    /* display: none !important; */
-    overflow: hidden;
-    position: absolute;
-    background-color: #004C66;
-    top: 100%;
-    right: -100%;
-    width: 100%;
-    height: 70vh;
-    flex-direction: column;
-    transition: right .3s ;
-  }
-
-  .mobile-menu {
-    display: block !important;
-  }
+.products-table .card .image img {
+  aspect-ratio: 8 /5;
 }
 
+/* Category Brand Available pieces */
+.c-b-avp {
+  font-size: 14px;
+}
+
+.c-b-avp > span:not(:last-child) {
+  cursor: pointer;
+}
+
+.product-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
